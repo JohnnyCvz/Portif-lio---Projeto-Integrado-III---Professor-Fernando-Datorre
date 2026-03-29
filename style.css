@@ -1,0 +1,124 @@
+:root {
+    --azul-meia-noite: #000B18;
+    --ouro: #C5A059;
+    --texto: #E0E0E0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+
+body {
+    background-color: var(--azul-meia-noite);
+    color: var(--texto);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- FUNDO PARALLAX --- */
+.background-parallax {
+    position: fixed;
+    top: -5%; left: -5%;
+    width: 110%; height: 110%;
+    z-index: -1;
+    background: linear-gradient(rgba(0, 11, 24, 0.85), rgba(0, 11, 24, 0.85)), 
+                url('https://i.pinimg.com/736x/92/03/9d/92039d9ac4e7b07a30bbb1d185016875.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.2s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* --- NAV --- */
+nav {
+    position: fixed; width: 100%; padding: 1.5rem 5%; z-index: 1000;
+    backdrop-filter: blur(10px); border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+}
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo-artistico { font-family: 'Playfair Display', serif; color: var(--ouro); font-size: 1.2rem; }
+.info-academica { text-align: right; display: flex; flex-direction: column; }
+.curso-txt { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; }
+.professor-txt { font-size: 0.6rem; margin-top: 8px; color: white !important; }
+
+/* --- HERO --- */
+.hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; }
+.nome-principal {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+    color: var(--ouro) !important;
+    font-size: clamp(2.8rem, 10vw, 7rem);
+    letter-spacing: -2px;
+}
+
+/* --- MANIFESTO --- */
+.manifesto-secao { padding: 12vh 0; text-align: center; }
+.manifesto-texto {
+    font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+    line-height: 1.6;
+    font-weight: 300;
+    max-width: 1100px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* --- PROJETOS (GRID COM DESTAQUE CENTRAL) --- */
+.grade-projetos { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+
+.projeto-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(197, 160, 89, 0.15);
+    padding: 2.5rem;
+    transition: 0.4s;
+}
+
+.projeto-card:hover { border-color: var(--ouro); background: rgba(197, 160, 89, 0.05); }
+
+/* Alinhamento para o terceiro card (Pink Floyd) */
+.destaque-central {
+    grid-column: 1 / -1; /* Ocupa as duas colunas */
+    justify-self: center; /* Centraliza no eixo horizontal */
+    max-width: calc(50% - 1rem); /* Mantém o mesmo tamanho dos outros */
+}
+
+.projeto-tag { font-size: 0.6rem; text-transform: uppercase; color: var(--ouro); letter-spacing: 2px; display: block; margin-bottom: 1rem; }
+.projeto-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1rem; color: var(--ouro); font-weight: 400; }
+.projeto-card p { font-size: 0.9rem; font-weight: 200; opacity: 0.8; margin-bottom: 2rem; }
+.link-projeto { color: var(--texto); text-decoration: none; font-size: 0.8rem; border-bottom: 1px solid var(--ouro); padding-bottom: 5px; }
+
+/* --- GALERIA 9:16 --- */
+.grade-fotos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-top: 3rem; }
+.foto-box { aspect-ratio: 9 / 16; position: relative; overflow: hidden; border: 1px solid rgba(197, 160, 89, 0.2); }
+.foto-box img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s ease; }
+.foto-box:hover img { transform: scale(1.05); }
+.foto-tag { position: absolute; bottom: 10px; left: 10px; background: var(--ouro); color: var(--azul-meia-noite); padding: 4px 8px; font-size: 0.5rem; font-weight: bold; text-transform: uppercase; }
+
+/* --- ESTRUTURA GERAL --- */
+.titulo-com-espaco { margin-bottom: 3.5rem !important; }
+.cartao-glass { background: rgba(255, 255, 255, 0.03); padding: 5rem 4rem; backdrop-filter: blur(20px); border: 1px solid rgba(197, 160, 89, 0.1); }
+.secao-detalhada { padding: 8rem 0; }
+.container { max-width: 1300px; margin: 0 auto; padding: 0 5%; }
+.topico-ouro { color: var(--ouro) !important; }
+.espacador-vertical { height: 4rem; }
+.grade-dupla { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.subtitulo { text-transform: uppercase; letter-spacing: 5px; font-size: 0.7rem; margin-bottom: 10px; }
+.scroll-indicador { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); color: var(--ouro); font-size: 0.6rem; letter-spacing: 4px; opacity: 0.9; }
+
+/* --- FOOTER --- */
+footer { background: rgba(0,0,0,0.5); }
+.email-link { font-size: clamp(2rem, 6vw, 4rem); text-decoration: none; color: var(--texto); transition: 0.3s; }
+.email-link:hover { color: var(--ouro); }
+.grade-redes { display: flex; justify-content: space-between; border-top: 1px solid rgba(197, 160, 89, 0.1); padding-top: 3rem; margin-top: 3rem; flex-wrap: wrap; gap: 2rem; }
+.redes-grupo span { display: block; font-size: 0.7rem; color: var(--ouro); margin-bottom: 0.8rem; letter-spacing: 1px; }
+.redes-grupo a { color: var(--texto); text-decoration: none; display: block; margin-top: 0.5rem; transition: 0.3s; }
+.redes-grupo a:hover { color: var(--ouro); }
+.nota-final { margin-top: 4rem; border-left: 2px solid var(--ouro); padding-left: 2rem; font-size: 0.85rem; opacity: 0.8; max-width: 850px; line-height: 1.6; }
+.copyright { text-align: center; margin-top: 5rem; font-size: 0.7rem; opacity: 0.4; letter-spacing: 2px; }
+
+/* --- CURSOR --- */
+.cursor { width: 8px; height: 8px; background: var(--ouro); position: fixed; border-radius: 50%; pointer-events: none; z-index: 10000; }
+.cursor-follower { width: 40px; height: 40px; border: 1px solid var(--ouro); position: fixed; border-radius: 50%; pointer-events: none; z-index: 9999; transition: 0.15s; }
+
+@media (max-width: 1024px) { 
+    .grade-fotos { grid-template-columns: repeat(3, 1fr); } 
+    .grade-projetos { grid-template-columns: 1fr; }
+    .destaque-central { max-width: 100%; }
+}
+@media (max-width: 768px) { .grade-fotos { grid-template-columns: 1fr; } .cartao-glass { padding: 2rem; } }
