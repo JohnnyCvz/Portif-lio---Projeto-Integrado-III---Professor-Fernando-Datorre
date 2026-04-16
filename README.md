@@ -1,5 +1,7 @@
 # Portfólio Pessoal Profissional | 2026
 
+Link: https://johnnycvz.github.io/Portif-lio---Projeto-Integrado-III---Professor-Fernando-Datorre/
+
 Este projeto consiste no desenvolvimento de um site portfólio moderno e imersivo, focado na intersecção entre a **Engenharia de Computação** e a **Produção Audiovisual**. O design foi concebido com uma estética de alto nível, utilizando paleta de cores *Midnight Blue* e *Gold*, inspirado em referências globais do *Awwwards* e *Lusion*.
 
 ## Sobre o Autor
@@ -41,6 +43,5 @@ O projeto foi construído puramente com tecnologias Web nativas, focando em perf
 - **LinkedIn**: [johncovizzi](https://www.linkedin.com/in/johncovizzi/)
 - **Instagram Pessoal**: [@johnny.cvz](https://www.instagram.com/johnny.cvz/)
 - **Instagram Artístico**: [@johynn.png](https://www.instagram.com/johynn.png/)
-- **Flickr**: [johnnycovizzi](https://www.flickr.com/photos/johnnycovizzi/)
 - **E-mail**: johnwiver10@gmail.com
 - **Certificação de Inglês**: [Nível C1 Advanced](https://cert.efset.org/en/FsHBrd)
